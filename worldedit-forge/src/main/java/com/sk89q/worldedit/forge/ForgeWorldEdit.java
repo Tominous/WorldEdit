@@ -135,10 +135,10 @@ public class ForgeWorldEdit {
         WorldEdit.getInstance().getPlatformManager().register(platform);
 
 //  TODO      if (ModList.get().isLoaded("sponge")) {
-//            this.provider = new ForgePermissionsProvider.SpongePermissionsProvider();
-//        } else {
+            this.provider = new ForgePermissionsProvider.SpongePermissionsProvider();
+        } else {
         this.provider = new ForgePermissionsProvider.VanillaPermissionsProvider(platform);
-//        }
+        }
     }
 
     private void setupRegistries() {
